@@ -42,6 +42,27 @@
   width: 400px;
   justify-content: space-evenly;
  }
+
+ .cute-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff9f9f;
+  border: 2px solid #ff7f7f;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cute-button:hover {
+  background-color: #ff7f7f;
+  border-color: #ff5f5f;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
