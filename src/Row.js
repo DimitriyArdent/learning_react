@@ -7,10 +7,15 @@ function Row() {
          image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBP0TQsvyY26Fj1XxwEyXt6vt4r37dzJ__z8h_V0FjBQ&s'},
     {id:1,name: 'Song of ice and fire', Author:'Martin', 
     image:'https://upload.wikimedia.org/wikipedia/en/d/dc/A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg?20210904220743'}])
+ const[isOpen,setisopen] = useState(false)
+const {id} = useParams()
 
-    const {id} = useParams()
-useEffect(()=>{    setBooks(books.filter((b)=> b.id == id))
-})
+useEffect(()=>{  
+ setBooks(books.filter((b)=> b.id == id))
+ console.log('hello world')
+ },[] 
+)
+
    return (
     <div>
         <div>im in row component</div>
