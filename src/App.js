@@ -8,6 +8,7 @@ import Main from './Main';
 import ArrayComponent from './ArrayComponent';
 import Row from './Row';
 import Effect from './Effect';
+import EmitReciever from './EmitReciever';
  import { UserContextProvider } from './context/context';
 function App() {
   const[isOpen, setisOpen]=useState(false)
@@ -32,6 +33,8 @@ return(
                <Route path='/array/:id' element={<Row></Row>}></Route>
 
                <Route path='/effect' element={<Effect></Effect>}></Route>
+
+               <Route path='/emitter' element={<EmitReciever></EmitReciever>}></Route>
                 
       </Routes>
       </Layout> 
