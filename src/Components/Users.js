@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { UserContext } from '../Context/Context'
  function Users() {
@@ -6,6 +6,11 @@ import { UserContext } from '../Context/Context'
     const[name,setName] =useState('')
     const[house,setHouse] =useState('')
     const[editHouse,setEditedHouse] = useState('')
+
+    useEffect(()=>{
+        console.log(process.env.REACT_APP_WEBSITE_NAME)
+    },[])
+
   return (
     <div>
              <div>{state.gameOfThronesCharacters.map((ch,i)=>(

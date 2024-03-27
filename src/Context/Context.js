@@ -34,10 +34,14 @@ const reducer = (state, action) => {
           gameOfThronesCharacters: [...state.gameOfThronesCharacters, {name:action.data.name, house: action.data.house}]
         };
         case "EDIT_CHAR_HOUSE":
+
             const index = state.gameOfThronesCharacters.findIndex((ch)=>ch.name == action.data.name)
             if(index!= -1){
                 const updatedCharacters = [...state.gameOfThronesCharacters]
                 updatedCharacters[index] = {...updatedCharacters[index], house: action.data.house}
+
+
+                
                 return{
                     ...state,
                     gameOfThronesCharacters: updatedCharacters
